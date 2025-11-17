@@ -24,7 +24,7 @@ yew-router = "0.18"
 sqlx = { version = "0.8", features = ["runtime-tokio", "tls-rustls", "sqlite"] }
 
 # Redis
-redis = { version = "0.27", features = ["tokio-comp"] }
+redis = { version = "0.32", features = ["tokio-comp"] }
 
 # HTTP Client
 reqwest = { version = "0.12", features = ["json"] }
