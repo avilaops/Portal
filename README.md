@@ -1,105 +1,192 @@
+# 🦀 Portal Avila
 
-| Produto                | URL                           | Descrição                            |
-| ---------------------- | ----------------------------- | ------------------------------------ |
-| **Avila Vault**        | vault.avila.inc               | Secrets management inteligente       |
-| **Avila Pulse**        | pulse.avila.inc               | Hub de telemetria executiva          |
-| **On Platform**        | on.avila.inc                  | Multi-Agent AI Platform              |
-| **Darwin**             | darwin.avila.inc              | Self-healing autônomo                |
-| **AgentHub**           | agenthub.avila.inc            | Orquestração de agentes IA           |
-| **Camacho**            | camacho.avila.inc             | Gestão inteligente de cardápios      |
-| **Geolocation**        | geolocation.avila.inc         | Inteligência geoespacial             |
-| **Barbara**            | barbara.avila.inc             | Plataforma 3D WebGL                  |
-| **MRG**                | mrgcaixastermicas.com.br      | Logística refrigerada                |
-| **Reports Automation** | portal.avila.inc/reports.html | Framework de automação de relatórios |
+> Full-stack enterprise portal built with **100% Rust** + **WebAssembly**
 
-## 🔧 Desenvolvimento Local
+[![Rust](https://img.shields.io/badge/Rust-1.91+-orange.svg)](https://www.rust-lang.org/)
+[![WASM](https://img.shields.io/badge/WebAssembly-Supported-blue.svg)](https://webassembly.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Deploy](https://img.shields.io/badge/Deploy-GitHub%20Pages-success.svg)](https://avilaops.github.io/Portal/)
 
-```bash
-# Opção 1: Servidor Python simples
-cd Portal
-python -m http.server 8000
-
-# Opção 2: Live Server (VS Code)
-# Instalar extensão Live Server e clicar com botão direito em index.html
-
-# Opção 3: SWA CLI
-swa start . --port 8000
-```
-
-Acesse: http://localhost:8000
-
-## 🎨 Customização
-
-### **Cores** (em `styles.css`)
-```css
-:root {
-    --primary: #6366f1;      /* Indigo */
-    --secondary: #8b5cf6;    /* Purple */
-    --accent: #ec4899;       /* Pink */
-}
-```
-
-### **Adicionar Novo Produto**
-Editar `index.html`, seção `.products-grid`:
-
-```html
-<div class="product-card">
-    <div class="product-icon">🆕</div>
-    <h3>Novo Produto</h3>
-    <p class="product-description">Descrição...</p>
-    <ul class="product-features">
-        <li>✓ Feature 1</li>
-        <li>✓ Feature 2</li>
-    </ul>
-    <div class="product-footer">
-        <a href="https://produto.avila.inc" class="product-link">
-            Acessar →
-        </a>
-        <span class="product-status online">● Online</span>
-    </div>
-</div>
-```
-
-## 📈 Performance
-
-- **Lighthouse Score**: 95+ (Mobile & Desktop)
-- **Load Time**: < 1s (first paint)
-- **Bundle Size**: < 50KB (total)
-- **Zero dependencies**: Vanilla JS
-
-## 🔐 Segurança
-
-- ✅ HTTPS only
-- ✅ Content Security Policy headers
-- ✅ No inline scripts (CSP compliant)
-- ✅ XSS protection
-- ✅ CORS configurado
-
-## 📝 TODO / Roadmap
-
-- [ ] Adicionar sistema de autenticação (Portal do Cliente)
-- [ ] Integrar com API de contato real
-- [ ] Adicionar blog/notícias
-- [ ] Dashboard de métricas dos produtos
-- [ ] Suporte a internacionalização (i18n)
-- [ ] PWA (Progressive Web App)
-- [ ] Analytics integration (Plausible/Umami)
-
-## 🤝 Contribuição
-
-1. Clone o repositório
-2. Faça suas modificações
-3. Teste localmente
-4. Commit e push
-5. Deploy automático via GitHub Actions (futuro)
-
-## 📞 Suporte
-
-- **Email**: contato@avila.inc
-- **Documentação**: https://docs.avila.inc
-- **Status**: https://status.avila.inc
+Enterprise-grade portal managing **10 integrated products** with real-time dashboards, JWT authentication, and modern full-stack Rust architecture.
 
 ---
 
-**© 2025 Avila Inc** - Transformando negócios com IA 🚀
-# Portal
+## ✨ Features
+
+- 🦀 **100% Rust** - Backend and Frontend
+- ⚡ **WebAssembly** - Native performance in browser
+- 🔐 **JWT Auth** - Secure authentication system
+- 🗄️ **SQLite** - Zero-config database
+- 📊 **Dashboard** - Real-time metrics
+- 🛍️ **10 Products** - Integrated product catalog
+- 🐳 **Docker Ready** - One-command deployment
+- 🚀 **GitHub Actions** - CI/CD pipeline
+
+---
+
+## 🏗️ Architecture
+
+```
+Frontend (Yew + WASM)  →  Backend (Actix)  →  SQLite
+     ↓                        ↓                   ↓
+  Routing                 REST API            Products
+  Components              JWT Auth            Users
+  State Mgmt              CORS                Activities
+```
+
+**Tech Stack:**
+- **Frontend**: Rust → Yew → WebAssembly
+- **Backend**: Rust → Actix-web → SQLx
+- **Database**: SQLite (dev) / PostgreSQL (prod)
+- **Auth**: JWT + bcrypt
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Rust 1.91+ ([Install](https://rustup.rs/))
+- Trunk (`cargo install trunk`)
+
+### Run Locally
+
+**Option 1: Scripts (Windows)**
+```powershell
+.\run-backend.bat   # Terminal 1
+.\run-frontend.bat  # Terminal 2
+```
+
+**Option 2: Manual**
+```bash
+# Terminal 1: Backend
+cd backend
+cargo run --bin server
+
+# Terminal 2: Frontend  
+cd frontend
+trunk serve --open
+```
+
+**Access**: http://127.0.0.1:8081
+
+---
+
+## 📦 Integrated Products
+
+| Product | URL | Category |
+|---------|-----|----------|
+| **Avila Vault** | vault.avila.inc | 🔐 Security |
+| **Avila Pulse** | pulse.avila.inc | 📊 Analytics |
+| **On Platform** | on.avila.inc | 🧠 AI |
+| **Darwin** | darwin.avila.inc | 🔄 Infrastructure |
+| **AgentHub** | agenthub.avila.inc | 🤖 AI |
+| **Camacho** | camacho.avila.inc | 📋 SaaS |
+| **Geolocation** | geolocation.avila.inc | 📍 AI |
+| **Barbara** | barbara.avila.inc | 🎮 SaaS |
+| **MRG** | mrgcaixastermicas.com.br | 📦 SaaS |
+| **Reports** | portal.avila.inc/reports | 📊 Analytics |
+
+---
+
+## 🛠️ Development
+
+### Setup
+```bash
+make setup
+# or
+rustup target add wasm32-unknown-unknown
+cargo install trunk
+```
+
+### Build
+```bash
+make build
+# or
+cargo build --release --workspace
+```
+
+### Test
+```bash
+make test
+# or
+cargo test --all
+```
+
+---
+
+## 🐳 Docker
+
+```bash
+docker-compose up
+```
+
+Access: http://localhost:8080
+
+---
+
+## 📚 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/api/health` | Health check |
+| POST | `/api/auth/login` | User login |
+| POST | `/api/auth/register` | User registration |
+| GET | `/api/auth/me` | Get current user |
+| GET | `/api/products` | List all products |
+| GET | `/api/products/{id}` | Get product by ID |
+| GET | `/api/dashboard/metrics` | Dashboard metrics |
+
+---
+
+## 🔒 Security
+
+- ✅ JWT authentication
+- ✅ Password hashing (bcrypt)
+- ✅ CORS configured
+- ✅ Type-safe end-to-end
+- ✅ No secrets in code
+- ✅ SQL injection protection
+
+---
+
+## 📖 Documentation
+
+- [Architecture](ARCHITECTURE.md)
+- [Development Guide](DEVELOPMENT.md)
+- [Contributing](CONTRIBUTING.md)
+- [Security](SECURITY.md)
+- [Changelog](CHANGELOG.md)
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE)
+
+---
+
+## 🌟 Highlights
+
+- **Type Safety**: Rust's compile-time guarantees
+- **Performance**: WebAssembly native speed
+- **Zero JS**: No Node.js, no npm, no webpack
+- **Modern**: Latest Rust ecosystem tools
+- **Production Ready**: Docker, CI/CD, monitoring
+
+---
+
+## 📞 Support
+
+- **Email**: contato@avila.inc
+- **Issues**: [GitHub Issues](https://github.com/avilaops/Portal/issues)
+- **Docs**: [GitHub Pages](https://avilaops.github.io/Portal/)
+
+---
+
+**Made with 🦀 by [Avila Inc](https://avila.inc)**
