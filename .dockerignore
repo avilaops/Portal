@@ -1,0 +1,38 @@
+# Build artifacts
+target/
+dist/
+pkg/
+
+# Git
+.git/
+.gitignore
+
+# Documentation
+*.md
+ARCHITECTURE.md
+DEVELOPMENT.md
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CI/CD
+.github/
+
+# Scripts
+*.sh
+*.bat
+
+# Certs
+certs/

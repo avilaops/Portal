@@ -1,0 +1,29 @@
+[package]
+name = "avila-portal-frontend"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+# Workspace dependencies
+avila-portal-shared = { path = "../shared" }
+
+# Yew
+yew.workspace = true
+yew-router.workspace = true
+
+# Wasm
+wasm-bindgen.workspace = true
+wasm-bindgen-futures.workspace = true
+web-sys.workspace = true
+gloo.workspace = true
+gloo-console.workspace = true
+wasm-logger = "0.2"
+
+# Serialization
+serde.workspace = true
+serde_json.workspace = true
+
+# Utilities
+chrono.workspace = true

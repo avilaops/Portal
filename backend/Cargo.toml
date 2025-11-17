@@ -1,0 +1,30 @@
+[package]
+name = "avila-portal-backend"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "server"
+path = "src/main.rs"
+
+[dependencies]
+avila-portal-shared = { path = "../shared" }
+actix-web.workspace = true
+actix-cors.workspace = true
+actix-files.workspace = true
+sqlx.workspace = true
+redis.workspace = true
+bcrypt.workspace = true
+jsonwebtoken.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+dotenv.workspace = true
+env_logger.workspace = true
+reqwest.workspace = true
+log.workspace = true
+futures.workspace = true
+tokio.workspace = true

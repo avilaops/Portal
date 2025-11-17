@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avila Inc - Soluções Inteligentes com IA</title>
+    <meta name="description" content="Avila Inc - Plataforma de soluções empresariais com Inteligência Artificial. Self-healing, automação, gestão inteligente e muito mais.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">⚡</span>
+                <span class="brand-name">Avila Inc</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#" class="btn-login">Portal do Cliente</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Transforme seu negócio com
+                    <span class="gradient-text">Inteligência Artificial</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Soluções empresariais que se adaptam, aprendem e evoluem automaticamente.
+                    Da automação completa ao self-healing inteligente.
+                </p>
+                <div class="hero-cta">
+                    <a href="#produtos" class="btn btn-primary">Conheça nossos produtos</a>
+                    <a href="#demo" class="btn btn-secondary">Agende uma demo</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Produtos IA</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Suporte</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produtos" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Produtos</h2>
+                <p>Soluções completas de IA para transformar sua operação</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Avila Vault -->
+                <div class="product-card" data-product="avila-vault">
+                    <div class="product-icon">🔐</div>
+                    <h3>Avila Vault</h3>
+                    <p class="product-description">
+                        Secrets management inteligente com criptografia AES-256-GCM.
+                        Segurança zero-knowledge para suas credenciais.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ Criptografia AES-256-GCM</li>
+                        <li>✓ MFA autenticação</li>
+                        <li>✓ Auditoria completa</li>
+                        <li>✓ Zero-knowledge encryption</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="https://vault.avila.inc" class="product-link" target="_blank">
+                            Acessar Vault →
+                        </a>
+                        <span class="product-status online">● Online</span>
+                    </div>
+                </div>
+
+                <!-- Avila Pulse -->
+                <div class="product-card" data-product="pulse">
+                    <div class="product-icon">📊</div>
+                    <h3>Avila Pulse</h3>
+                    <p class="product-description">
+                        Hub de telemetria executiva com dashboards em tempo real.
+                        Métricas consolidadas para decisões inteligentes.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ Dashboards em tempo real</li>
+                        <li>✓ Métricas consolidadas</li>
+                        <li>✓ Event streaming</li>
+                        <li>✓ Analytics executivos</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="https://pulse.avila.inc" class="product-link" target="_blank">
+                            Acessar Pulse →
+                        </a>
+                        <span class="product-status development">● Em Desenvolvimento</span>
+                    </div>
+                </div>
+
+                <!-- On Platform -->
+                <div class="product-card" data-product="on-platform">
+                    <div class="product-icon">🧠</div>
+                    <h3>On Platform</h3>
+                    <p class="product-description">
+                        Multi-Agent AI Platform com 9 agentes especializados.
+                        Orquestração autônoma 24/7 para operações multinacionais.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ 9 agentes especializados</li>
+                        <li>✓ Orquestração autônoma</li>
+                        <li>✓ Operação 24/7</li>
+                        <li>✓ Auto-healing inteligente</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="https://on.avila.inc" class="product-link" target="_blank">
+                            Acessar On Platform →
+                        </a>
+                        <span class="product-status development">● Em Desenvolvimento</span>
+                    </div>
+                </div>
+
+                <!-- Darwin -->
+                <div class="product-card" data-product="darwin">
+                    <div class="product-icon">🔄</div>
+                    <h3>Darwin Self-Healing</h3>
+                    <p class="product-description">
+                        Sistema autônomo que detecta, diagnostica e corrige problemas automaticamente.
+                        Sua infraestrutura se auto-regenera.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ Auto-recuperação inteligente</li>
+                        <li>✓ Monitoramento 24/7</li>
+                        <li>✓ Machine Learning adaptativo</li>
+                        <li>✓ Zero downtime</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="https://darwin.avila.inc" class="product-link" target="_blank">
+                            Acessar Darwin →
+                        </a>
+                        <span class="product-status online">● Online</span>
+                    </div>
+                </div>
+
+                <!-- AgentHub -->
+                <div class="product-card" data-product="agenthub">
+                    <div class="product-icon">🤖</div>
+                    <h3>AgentHub</h3>
+                    <p class="product-description">
+                        Plataforma de orquestração de agentes IA. Crie, gerencie e escale
+                        múltiplos agentes inteligentes trabalhando em conjunto.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ Orquestração multi-agente</li>
+                        <li>✓ Framework extensível</li>
+                        <li>✓ API completa</li>
+                        <li>✓ Dashboard em tempo real</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="https://agenthub.avila.inc" class="product-link" target="_blank">
+                            Acessar AgentHub →
+                        </a>
+                        <span class="product-status online">● Online</span>
+                    </div>
+                </div>
+
+                <!-- Camacho -->
+                <div class="product-card" data-product="camacho">
+                    <div class="product-icon">📋</div>
+                    <h3>Camacho</h3>
+                    <p class="product-description">
+                        Sistema inteligente de gestão de cardápios e pedidos com IA.
+                        Recomendações personalizadas e otimização de estoque.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ Cardápio digital inteligente</li>
+                        <li>✓ Recomendações por IA</li>
+                        <li>✓ Gestão de pedidos</li>
+                        <li>✓ Analytics preditivo</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="https://camacho.avila.inc" class="product-link" target="_blank">
+                            Acessar Camacho →
+                        </a>
+                        <span class="product-status online">● Online</span>
+                    </div>
+                </div>
+
+                <!-- Geolocation -->
+                <div class="product-card" data-product="geolocation">
+                    <div class="product-icon">📍</div>
+                    <h3>Geolocation AI</h3>
+                    <p class="product-description">
+                        Inteligência geoespacial avançada. Análise de localização,
+                        rotas otimizadas e previsões baseadas em contexto.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ Rastreamento em tempo real</li>
+                        <li>✓ Otimização de rotas</li>
+                        <li>✓ Análise preditiva</li>
+                        <li>✓ Geofencing inteligente</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="https://geolocation.avila.inc" class="product-link" target="_blank">
+                            Acessar Geolocation →
+                        </a>
+                        <span class="product-status online">● Online</span>
+                    </div>
+                </div>
+
+                <!-- Barbara -->
+                <div class="product-card" data-product="barbara">
+                    <div class="product-icon">🎮</div>
+                    <h3>Barbara WebGL</h3>
+                    <p class="product-description">
+                        Plataforma 3D interativa de alta performance. Visualizações
+                        imersivas e experiências web inovadoras.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ Renderização WebGL</li>
+                        <li>✓ Experiências 3D</li>
+                        <li>✓ Performance otimizada</li>
+                        <li>✓ Cross-platform</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="https://barbara.avila.inc" class="product-link" target="_blank">
+                            Acessar Barbara →
+                        </a>
+                        <span class="product-status online">● Online</span>
+                    </div>
+                </div>
+
+                <!-- MRG -->
+                <div class="product-card" data-product="mrg">
+                    <div class="product-icon">📦</div>
+                    <h3>MRG Logística</h3>
+                    <p class="product-description">
+                        Sistema completo para gestão de caixas térmicas e logística
+                        refrigerada com rastreamento inteligente.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ Controle de temperatura</li>
+                        <li>✓ Rastreamento IoT</li>
+                        <li>✓ Gestão de frota</li>
+                        <li>✓ Alertas inteligentes</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="https://mrgcaixastermicas.com.br" class="product-link" target="_blank">
+                            Acessar MRG →
+                        </a>
+                        <span class="product-status online">● Online</span>
+                    </div>
+                </div>
+
+                <!-- Reports Automation -->
+                <div class="product-card" data-product="reports">
+                    <div class="product-icon">📊</div>
+                    <h3>Reports Automation</h3>
+                    <p class="product-description">
+                        Framework de automação de relatórios executivos. Transforme
+                        dados JSON em emails HTML formatados automaticamente.
+                    </p>
+                    <ul class="product-features">
+                        <li>✓ Relatórios automáticos por email</li>
+                        <li>✓ Templates customizáveis</li>
+                        <li>✓ Dashboards executivos</li>
+                        <li>✓ Agendamento inteligente</li>
+                    </ul>
+                    <div class="product-footer">
+                        <a href="/reports.html" class="product-link">
+                            Saiba Mais →
+                        </a>
+                        <span class="product-status online">● Disponível</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tecnologia de Ponta</h2>
+                <p>Construído com as melhores ferramentas do mercado</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <span class="tech-icon">☁️</span>
+                    <span class="tech-name">Azure Cloud</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🤖</span>
+                    <span class="tech-name">OpenAI GPT-4</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">⚡</span>
+                    <span class="tech-name">Next.js</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🐍</span>
+                    <span class="tech-name">Python</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🗄️</span>
+                    <span class="tech-name">PostgreSQL</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-icon">🔒</span>
+                    <span class="tech-name">Azure AD</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Sobre a Avila Inc</h2>
+                    <p>
+                        Somos uma empresa de tecnologia focada em soluções de Inteligência
+                        Artificial para empresas que querem transformar suas operações.
+                    </p>
+                    <p>
+                        Nossa missão é democratizar o acesso a tecnologias avançadas de IA,
+                        tornando-as acessíveis e práticas para negócios de todos os tamanhos.
+                    </p>
+                    <div class="about-values">
+                        <div class="value-item">
+                            <h4>🎯 Inovação</h4>
+                            <p>Sempre na vanguarda da tecnologia</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>🤝 Parceria</h4>
+                            <p>Crescemos junto com nossos clientes</p>
+                        </div>
+                        <div class="value-item">
+                            <h4>⚡ Eficiência</h4>
+                            <p>Resultados mensuráveis e rápidos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <span class="placeholder-icon">🚀</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Vamos conversar sobre como podemos ajudar seu negócio</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:contato@avila.inc">contato@avila.inc</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <div>
+                            <h4>Website</h4>
+                            <a href="https://avila.inc">avila.inc</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💼</span>
+                        <div>
+                            <h4>Portal do Cliente</h4>
+                            <a href="https://portal.avila.inc">portal.avila.inc</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Seu nome" required>
+                        <input type="email" placeholder="Seu email" required>
+                        <input type="text" placeholder="Empresa">
+                        <textarea placeholder="Mensagem" rows="4" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">⚡</span>
+                    <span class="brand-name">Avila Inc</span>
+                    <p>Transformando negócios com IA</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Security & Analytics</h4>
+                        <a href="https://vault.avila.inc">Avila Vault</a>
+                        <a href="https://pulse.avila.inc">Avila Pulse</a>
+                        <a href="https://on.avila.inc">On Platform</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Infrastructure & AI</h4>
+                        <a href="https://darwin.avila.inc">Darwin</a>
+                        <a href="https://agenthub.avila.inc">AgentHub</a>
+                        <a href="https://geolocation.avila.inc">Geolocation</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>SaaS & Platform</h4>
+                        <a href="https://camacho.avila.inc">Camacho</a>
+                        <a href="https://barbara.avila.inc">Barbara</a>
+                        <a href="https://mrgcaixastermicas.com.br">MRG</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Empresa</h4>
+                        <a href="#sobre">Sobre</a>
+                        <a href="#contato">Contato</a>
+                        <a href="#">Carreiras</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Avila Inc. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="GitHub">gh</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
