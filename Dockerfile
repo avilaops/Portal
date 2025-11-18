@@ -2,10 +2,11 @@ FROM rust:1.75 as backend-builder
 
 WORKDIR /app
 
-# Copiar arquivos de dependências
+# Copiar todos arquivos workspace
 COPY Cargo.toml Cargo.lock ./
 COPY shared/ ./shared/
 COPY backend/ ./backend/
+COPY frontend/ ./frontend/
 
 # Build backend
 WORKDIR /app/backend
@@ -36,7 +37,7 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /app
 
-# Copiar binário do backend
+# Copiar binï¿½rio do backend
 COPY --from=backend-builder /app/target/release/server /app/server
 
 # Copiar frontend buildado
