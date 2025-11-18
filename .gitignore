@@ -11,7 +11,7 @@ target/
 *~
 .vs/
 
-# Environment (CRÍTICO - NUNCA COMMITAR)
+# Environment (CRï¿½TICO - NUNCA COMMITAR)
 .env
 .env.
 !.env.example
@@ -20,7 +20,7 @@ target/
 *.pem
 *.crt
 
-# Database (CRÍTICO - DADOS SENSÍVEIS)
+# Database (CRï¿½TICO - DADOS SENSï¿½VEIS)
 *.db
 *.db-shm
 *.db-wal
@@ -45,7 +45,7 @@ build/
 frontend/dist/
 backend/target/
 
-# Logs (podem conter dados sensíveis)
+# Logs (podem conter dados sensï¿½veis)
 *.log
 logs/
 npm-debug.log*
@@ -71,7 +71,6 @@ coverage/
 *.profraw
 *.profdata
 
-# Lock files (opcional - alguns preferem commitar)
-Cargo.lock
+# Lock files (package-lock e yarn)
 package-lock.json
 yarn.lock
