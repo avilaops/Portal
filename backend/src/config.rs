@@ -3,6 +3,7 @@
 #[derive(Clone, Debug)]
 pub struct Config {
     pub database_url: String,
+    #[allow(dead_code)]
     pub redis_url: String,
     pub jwt_secret: String,
     pub jwt_expiration: i64,

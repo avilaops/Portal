@@ -58,6 +58,7 @@ impl Product {
     }
 }
 
+#[allow(dead_code)]
 #[derive(Debug, Clone, FromRow, Serialize, Deserialize)]
 pub struct Activity {
     pub id: String,

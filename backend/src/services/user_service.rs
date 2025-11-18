@@ -1,10 +1,12 @@
-﻿use sqlx::SqlitePool;
-use crate::{models::User, error::ApiError};
+﻿use crate::{error::ApiError, models::User};
+use sqlx::SqlitePool;
 
+#[allow(dead_code)]
 pub struct UserService {
     pool: SqlitePool,
 }
 
+#[allow(dead_code)]
 impl UserService {
     pub fn new(pool: SqlitePool) -> Self {
         Self { pool }
@@ -15,7 +17,7 @@ impl UserService {
             .bind(id)
             .fetch_optional(&self.pool)
             .await?;
-        
+
         Ok(user)
     }
 
@@ -24,7 +26,7 @@ impl UserService {
             .bind(email)
             .fetch_optional(&self.pool)
             .await?;
-        
+
         Ok(user)
     }
 }

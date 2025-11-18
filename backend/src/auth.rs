@@ -34,6 +34,7 @@ impl AuthService {
         .map_err(|e| ApiError::InternalError(e.to_string()))
     }
 
+    #[allow(dead_code)]
     pub fn validate_token(&self, token: &str) -> Result<TokenClaims, ApiError> {
         decode::<TokenClaims>(
             token,

@@ -2,8 +2,10 @@ use gloo::net::http::Request;
 use web_sys::window;
 use avila_portal_shared::{LoginRequest, RegisterRequest, LoginResponse, Product, DashboardMetrics};
 
+#[allow(dead_code)]
 const BASE_URL: &str = "http://localhost:8080/api";
 
+#[allow(dead_code)]
 fn get_token() -> Option<String> {
     window()?
         .local_storage().ok()??
@@ -11,12 +13,14 @@ fn get_token() -> Option<String> {
 
 }
 
+#[allow(dead_code)]
 fn save_token(token: &str) {
     if let Some(storage) = window().and_then(|w| w.local_storage().ok()).flatten() {
         let _ = storage.set_item("auth_token", token);
     }
 }
 
+#[allow(dead_code)]
 pub async fn login(email: &str, password: &str) -> Result<LoginResponse, String> {
     let req = LoginRequest {
         email: email.to_string(),
@@ -36,6 +40,7 @@ pub async fn login(email: &str, password: &str) -> Result<LoginResponse, String>
     Ok(data)
 }
 
+#[allow(dead_code)]
 pub async fn register(email: &str, password: &str, name: &str, company: Option<&str>) -> Result<LoginResponse, String> {
     let req = RegisterRequest {
         email: email.to_string(),
@@ -57,6 +62,7 @@ pub async fn register(email: &str, password: &str, name: &str, company: Option<&
     Ok(data)
 }
 
+#[allow(dead_code)]
 pub async fn get_products() -> Result<Vec<Product>, String> {
     let mut request = Request::get(&format!("{}/products", BASE_URL));
 
@@ -72,6 +78,7 @@ pub async fn get_products() -> Result<Vec<Product>, String> {
     response.json().await.map_err(|e| e.to_string())
 }
 
+#[allow(dead_code)]
 pub async fn get_dashboard() -> Result<DashboardMetrics, String> {
     let mut request = Request::get(&format!("{}/dashboard/metrics", BASE_URL));
 

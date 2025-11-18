@@ -1,16 +1,15 @@
-﻿use actix_web::{web, App, HttpServer, middleware};
-use actix_cors::Cors;
+﻿use actix_cors::Cors;
 use actix_files::Files;
+use actix_web::{middleware, web, App, HttpServer};
 use sqlx::sqlite::SqlitePoolOptions;
-use std::env;
 
 mod auth;
+mod config;
+mod custom_middleware;
+mod error;
 mod handlers;
 mod models;
-mod custom_middleware;
 mod services;
-mod config;
-mod error;
 
 use config::Config;
 
@@ -20,7 +19,7 @@ async fn main() -> std::io::Result<()> {
     env_logger::init();
 
     let config = Config::from_env();
-    
+
     log::info!("Conectando ao SQLite...");
     let pool = SqlitePoolOptions::new()
         .max_connections(5)
