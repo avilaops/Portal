@@ -1,4 +1,4 @@
-FROM rust:1.81 as backend-builder
+FROM rust:1.91 as backend-builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ WORKDIR /app/backend
 RUN cargo build --release
 
 # Build frontend
-FROM rust:1.81 as frontend-builder
+FROM rust:1.91 as frontend-builder
 
 RUN cargo install trunk
 RUN rustup target add wasm32-unknown-unknown
